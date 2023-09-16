@@ -1,10 +1,6 @@
-using Microsoft.Playwright;
 using NUnit.Framework;
 using QuintExercise.Drivers;
 using QuintExercise.Pages;
-using System;
-using System.Xml.Linq;
-using TechTalk.SpecFlow;
 
 namespace QuintExercise.StepDefinitions
 {
@@ -91,9 +87,6 @@ namespace QuintExercise.StepDefinitions
         [Then(@"phone number passes form validation and whats your marital status is displayed")]
         public async Task ThenPhoneNumberPassesFormValidationAndWhatsYourMaritalStatusIsDisplayed()
         {
-            //var whatsyourmaritalstatus =  _driverHelpers.page.GetByText("What’s your marital status?");
-            //Assert.IsTrue(whatsyourmaritalstatus);
-            //await Task.Delay(2000);
             await _driverHelpers.page.GetByText("What’s your marital status").WaitForAsync();
             var Maritalstatus = await _driverHelpers.page.GetByText("What’s your marital status").IsVisibleAsync();
             Assert.True(Maritalstatus);

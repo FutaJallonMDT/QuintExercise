@@ -17,25 +17,5 @@ namespace QuintExercise.Pages
 
 
         public async Task ClickDuration(string option) => await duration(option).ClickAsync();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//await page.Locator("#mobileNumber").FillAsync("07897641544");
-
-//await page.GetByRole(AriaRole.Button, new() { Name = "Continue" }).ClickAsync();
-
-//await page.GetByRole(AriaRole.Heading, new() { Name = "What’s your marital status?" }).ClickAsync();
     }
 }
